@@ -6,11 +6,13 @@ export default class Character extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     return {
       name: new HTMLField(),
-      health: new SchemaField({
-        value: new NumberField({ required: true, integer: true, min: 0, initial: 10 }),
-        min: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
-        max: new NumberField({ required: true, integer: true, min: 0, initial: 10 })
+      attributes: new SchemaField({
+        base: new NumberField({ required: true, nullable: false, integer: true, min: 4, initial: 5, label: "RA.Attributes"})
       }),
+      lifePoints: new SchemaField({
+        value: new NumberField({ required: true, nullable: false, integer: true, min: 0, initial: 100, label: "RA.LifePoints" }),
+      }),
+
       proficiencies: new SchemaField({
         weapons: new ArrayField(new StringField()),
         skills: new ArrayField(new StringField())
