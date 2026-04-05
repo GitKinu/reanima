@@ -1,1 +1,1 @@
-export {default as ReanimaActor} from "./actor/actor.mjs";
+export {default as ReanimaActorDataModel} from "./actor/actor.mjs";

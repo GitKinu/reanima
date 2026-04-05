@@ -1,0 +1,96 @@
+{
+  "ACTOR": {
+
+  "SHEET": {
+    "Abilities": "Abilities",
+    "Skills": "Skills"
+  }
+},
+
+  "ABILITIES.Agility": "Agility",
+  "ABILITIES.AgilityAbbr": "AGI",
+
+  "ABILITIES.Constitution": "Constitution",
+  "ABILITIES.ConstitutionAbbr": "CON",
+
+  "ABILITIES.Dexterity": "Dexterity",
+  "ABILITIES.DexterityAbbr": "Dex",
+
+  "ABILITIES.Strength": "Strength",
+  "ABILITIES.StrengthAbbr": "STR",
+
+  "ABILITIES.Intelligence": "Inteligence",
+  "ABILITIES.IntelligenceAbbr": "INT",
+
+  "ABILITIES.Perception": "Perception",
+  "ABILITIES.PerceptionAbbr": "PER",
+
+  "ABILITIES.Power": "Power",
+  "ABILITIES.PowerAbbr": "POW",
+  
+  "ABILITIES.Willpower": "Willpower",
+  "ABILITIES.WillpowerAbbr": "WIL",
+
+  "SKILLS": {
+    "Acrobatics": "Acrobatics",
+    "Athleticism": "Athleticism",
+    "Ride": "Ride",
+    "Swim": "Swim",
+    "Climb": "Climb",
+    "Jump": "Jump",
+    "Pilot": "Pilot",
+
+    "Style": "Style",
+    "Intimidate": "Intimidate",
+    "Leadership": "Leadership",
+    "Persuasion": "Persuasion",
+    "Commerce": "Commerce",
+    "Streetwise": "Streetwise",
+    "Etiquette": "Etiquette",
+
+    "Notice": "Notice",
+    "Search": "Search",
+    "Track": "Track",
+
+    "Animals": "Animal Handling",
+    "Sciences": "Sciences",
+    "Law": "Law",
+    "HerbalLore": "Herbal Lore",
+    "History": "History",
+    "Tactics": "Tactics",
+    "Medicine": "Medicine",
+    "Memorize": "Memorization",
+    "Navigation": "Navigation",
+    "Occult": "Occultism",
+    "Appraisal": "Appraisal",
+    "MagicalAssessment": "Magical Assessment",
+
+    "Composure": "Composure",
+    "FeatsStrength": "Feats of Strength",
+    "WithstandPain": "Pain Resistance",
+
+    "LockPicking": "Lock Picking",
+    "Disguise": "Disguise",
+    "Hide": "Hiding",
+    "Theft": "Theft",
+    "Stealth": "Stealth",
+    "TrapLore": "Trap Lore",
+    "Poisons": "Poisons",
+
+    "Art": "Art",
+    "Dance": "Dance",
+    "Forging": "Forging",
+    "Runes": "Runes",
+    "Alchemy": "Alchemy",
+    "Animism": "Animism",
+    "Music": "Music",
+    "SleightHand": "Sleight of Hand",
+    "RitualCalligraphy": "Ritual Calligraphy",
+    "Goldsmith": "Goldsmith",
+    "Tailor": "Tailor",
+    "PuppetMaking": "Puppet Making"
+  }
+}
+
+
+

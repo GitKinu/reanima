@@ -18,6 +18,18 @@
   ],
   "esmodules": ["reanima.mjs"],
   "styles": ["styles/reanima.css"],
+  "languages": [
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
+    },
+    {
+      "lang": "en",
+      "name": "Ingles",
+      "path": "lang/en.json"
+    }
+  ],
   "documentTypes": {
   "Actor": {
     "character": {
@@ -71,5 +83,6 @@
     "units": "m",
     "diagonals": 1
   },
-  "background": "systems/reanima/ui/background.webp"
+  "background": "systems/reanima/ui/background.webp",
+  "socket": true
 }
