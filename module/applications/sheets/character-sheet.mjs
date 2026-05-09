@@ -1,4 +1,5 @@
 const {api, sheets} = foundry.applications;
+import BasicDialog from "../../dice/basic-dialog.mjs";
 
 export default class CharacterActorSheet extends api.HandlebarsApplicationMixin(sheets.ActorSheetV2) {
   static DEFAULT_OPTIONS = {
@@ -9,7 +10,9 @@ export default class CharacterActorSheet extends api.HandlebarsApplicationMixin(
       height: 760
     },
     actions: {
-
+      abilityRoll: CharacterActorSheet.#onAbilityRoll,
+      skillRoll: CharacterActorSheet.#onSkillRoll
+      
     },
     form: {
       submitOnChange: true
@@ -28,9 +31,26 @@ export default class CharacterActorSheet extends api.HandlebarsApplicationMixin(
     { tab: "principal", label: "RE.Principal", icon: "" }
   ];*/
 
+  /*
+   * Tiradas automaticas
+   */
+
+  static async #onAbilityRoll(_event, target) {
+    
+    return this.actor.abilityRoll(target.closest(".ability").dataset.ability);
+  }
+  
+  static async #onSkillRoll(_event, target) {
+    
+    return this.actor.skillRoll(target.closest(".skill").dataset.skill);
+  }
+
+  /*
+   * Enviar datos a la ficha
+   */
+
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
-    //context.system = this.document.system;
     context.actor = this.document;
     context.abilities = this.#prepareAbilities();
     context.skills = this.#prepareSkills();
@@ -38,10 +58,14 @@ export default class CharacterActorSheet extends api.HandlebarsApplicationMixin(
     return context;
   }
 
+  /*
+   * Crear los objetos duplicados en base al datamodel,
+   */
+
   #prepareAbilities() {
     const a = this.actor.system.abilities;
     const abilities = Object.values(SYSTEM.ABILITIES).map(cfg => {
-      const ability = foundry.utils.deepClone(cfg);      
+      const ability = foundry.utils.deepClone(cfg);     
       ability.base = a[ability.id].base;
       ability.increases = a[ability.id].increases;
       ability.bonus = a[ability.id].bonus;
@@ -59,12 +83,17 @@ export default class CharacterActorSheet extends api.HandlebarsApplicationMixin(
     const a = this.actor.system.skills;
     const skills = Object.values(SYSTEM.SKILLS).map(cfg => {
       const skill = foundry.utils.deepClone(cfg);
-      skill.value = a[skill.id].value;
+      skill.price = a[skill.id].price;
+      skill.base = a[skill.id].base;
+      skill.ability = a[skill.id].ability;
+      skill.natural = a[skill.id].natural;
+      skill.category = a[skill.id].category;   
+      skill.modifier = a[skill.id].modifier;
 
       skill.label = game.i18n.localize(skill.label);
       return skill;
     })
     return skills;
   }
-  
+
 }

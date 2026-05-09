@@ -1,12 +1,13 @@
 {
   "ACTOR": {
+    "SHEET": {
+      "Abilities": "Abilities",
+      "Skills": "Skills"
+    }
+  },
+  "ABILITIES": {
 
-  "SHEET": {
-    "Abilities": "Abilities",
-    "Skills": "Skills"
-  }
-},
-
+  },
   "ABILITIES.Agility": "Agility",
   "ABILITIES.AgilityAbbr": "AGI",
 
@@ -30,7 +31,7 @@
   
   "ABILITIES.Willpower": "Willpower",
   "ABILITIES.WillpowerAbbr": "WIL",
-
+  
   "SKILLS": {
     "Acrobatics": "Acrobatics",
     "Athleticism": "Athleticism",
@@ -89,6 +90,18 @@
     "Goldsmith": "Goldsmith",
     "Tailor": "Tailor",
     "PuppetMaking": "Puppet Making"
+  },
+  "CHALLENGES": {
+    "Blank": "...",
+    "Routine": "Routine",
+    "Easy": "Easy",
+    "Medium": "Moderate",
+    "Hard": "Hard",
+    "VeryHard": "Very Hard",
+    "AlmostImpossible": "Almost Impossible",
+    "Impossible": "Impossible",
+    "Inhuman": "Inhuman",
+    "Zen": "Zen"
   }
 }
 

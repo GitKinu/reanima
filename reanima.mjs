@@ -40,7 +40,8 @@ Hooks.once("init", function() {
   Hooks.once("i18nInit", function() {
   console.log("Localización inicializada");
   const toLocalize = [
-    ["ABILITIES", ["abbreviation", "label"]]
+    ["ABILITIES", ["abbreviation", "label"]],
+    ["SKILLS", ["label"]]
   ];
 
   for ( const c of toLocalize ) {

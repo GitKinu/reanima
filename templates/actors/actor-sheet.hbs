@@ -12,29 +12,36 @@
         <h3>{{localize "ACTOR.SHEET.Abilities"}}</h3>
         {{#each abilities as |ability|}}
         <div class="ability {{ability.id}} {{ability.type}} flexcol" data-ability="{{ability.id}}">
-            <h4 class="label">{{ability.label}}</h4>
-            <span class="input score">{{ability.value}}</span>
+            <a class="label" data-action="abilityRoll">{{ability.label}}</a>
+            <span class="input score">{{ability.modifier}}</span>
             <div class="form-fields">
               <input type="number" name="system.abilities.{{ id }}.base" value="{{ability.base}}">
             </div>
             <div class="form-fields">
-              <input type="number" name="system.abilities.{{ id }}.value" value="{{ability.value}}">
+              <input type="number" name="system.abilities.{{ id }}.bonus" value="{{ability.bonus}}">
             </div>
         </div>
-        {{log ability.id}}
-        {{log ability.type}}
-        {{log ability.label}}
-        {{log ability.value}}
-        {{log ability.base}}
         {{/each}}
     </div> 
 
     <div>
       <h3>{{localize "ACTOR.SHEET.Skills"}}</h3>
       {{#each skills as |skill|}}
-      <div class="skill {{skill.id}} flexcol">
-        <h4 class="label">{{skill.label}}</h4>
-        <span class="input score">{{skill.value}}</span>
+      <div class="skill {{skill.id}} flexcol" data-skill="{{skill.id}}" data-action="skillRoll">
+        <a class="label">{{skill.label}}</a>
+        <span class="input score">{{skill.modifier}}</span>
+      </div>
+      <div class="form-fields">
+        <input type="number" name="system.skills.{{ id }}.price" value="{{skill.price}}">
+      </div>
+      <div class="form-fields">
+        <input type="number" name="system.skills.{{ id }}.base" value="{{skill.base}}">
+      </div>
+      <div class="form-fields">
+        <input type="number" name="system.skills.{{ id }}.ability" value="{{skill.ability}}">
+      </div>
+      <div class="form-fields">
+        <input type="number" name="system.skills.{{ id }}.natural" value="{{skill.natural}}">
       </div>
       {{/each}}
     </div>

@@ -1,11 +1,13 @@
 {
   "ACTOR": {
-  "SHEET": {
-    "Abilities": "Habilidades",
-    "Skills": "Secundarias"
-  }
-},
+    "SHEET": {
+      "Abilities": "Habilidades",
+      "Skills": "Secundarias"
+    }
+  },
+  "ABILITIES": {
 
+  },
   "ABILITIES.Agility": "Agilidad",
   "ABILITIES.AgilityAbbr": "AGI",
 
@@ -88,6 +90,18 @@
     "Goldsmith": "Orfebrería",
     "Tailor": "Confección",
     "PuppetMaking": "Marionetismo"
+  },
+  "CHALLENGES": {
+    "Blank": "...",
+    "Routine": "Rutinario",
+    "Easy": "Facil",
+    "Medium": "Media",
+    "Hard": "Dificil",
+    "VeryHard": "Muy Dificil",
+    "AlmostImpossible": "Casi Imposible",
+    "Impossible": "Imposible",
+    "Inhuman": "Inhumano",
+    "Zen": "Zen"
   }
 }
 
